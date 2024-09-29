@@ -1,0 +1,224 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu-tablet, .menu-mobile, .fa-bars {
+    display: none;
+}
+
+.menu-pc {
+    width: 55%;
+}
+
+i.fa-solid.fa-magnifying-glass {
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    left: 4%;
+    top: 6px;
+}
+
+i.fa-regular.fa-bell {
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px 10%;
+    transition: 0.5s ease;
+}
+
+i.fa-regular.fa-bell:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.find {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    width: 15%;
+}
+
+.personal {
+    width: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+li.cap-1 {
+    padding: 1%;
+    list-style: none;
+}
+
+li.cap-1:hover a {
+    color: red;
+}
+
+ul.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 70px;
+}
+
+.logo {
+    width: 10%;
+    cursor: pointer;
+}
+
+nav.nav-bar {
+    padding: 10px 1.5%;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+body {
+    background-color: black;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8% 0px;
+    transition: 0.5s ease;
+}
+
+.personal img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+.personal img:hover {
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.find input {
+    padding: 5px 5px 5px 30px;
+    border-radius: 15px;
+    color: white;
+    background-color: #333;
+    border: 1px solid #333;
+    width: 100%;
+}
+
+#here {
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 100px;
+    background-color: white;
+}
+
+#here a {
+    color: black;
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .menu-pc, .find, .logo, .fa-bars {
+        display: none;
+    }
+
+    nav.nav-bar {
+        position: fixed;
+        justify-content: space-between;
+    }
+
+    .menu-tablet {
+        width: 80%;
+        display: block;
+    }
+
+    .personal {
+        width: 20%;
+    }
+}
+
+/* Moblie */
+@media (max-width: 739px) {
+    .menu-pc, .menu-tablet, .find, .logo {
+        display: none;
+    }
+
+    .nav-bar {
+        position: fixed;
+        width: 100vw;
+    }
+
+    .menu-mobile {
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-mobile .fa-bars {
+        position: relative;
+        color: white;
+        font-size: 20px;
+        padding: 15px 20px;
+        cursor: pointer;
+    }
+
+    .menu-mobile .fa-bars:hover ul.menu {
+        display: block;
+    }
+
+    .personal {
+        width: 30%;
+    }
+
+    ul.menu {
+        position: absolute;
+        display: none;
+        width: 100vw;
+        height: auto;
+        padding: 30px 0px;
+        line-height: 50px;
+        top: 100%;
+        left: -20%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+        border: 2px solid rgba(0, 0, 0, 0.18);
+        background-color:rgb(86, 86, 86, 0.18);
+    }
+
+    .menu-mobile .find {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .find input {
+        padding: 5px 5px 5px 40px;
+        border-radius: 15px;
+        color: white;
+    }
+
+    .menu a {
+        letter-spacing: 3px;
+    }
+}
