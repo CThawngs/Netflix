@@ -85,15 +85,16 @@ ul.dots li {
 
 .buttons button:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.466);
+    background-color: rgba(32, 32, 32, 0.466);
+    color: #fff;
 }
 
 .buttons button {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background-color: #fff5;
-    color: #fff;
+    background-color: rgba(56, 56, 56, 0.333);
+    color: #d1d1d1;
     border: none;
     font-family: monospace;
     font-weight: bold;
