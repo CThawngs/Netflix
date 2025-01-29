@@ -4,57 +4,204 @@
     box-sizing: border-box;
 }
 
-.carousel .carousel-icons .right {
-    right: 0; /* Đặt biểu tượng sát bên phải */
-    top: 50%; /* Đặt biểu tượng ở giữa theo chiều dọc */
-    position: absolute; /* Vị trí tuyệt đối so với phần tử cha gần nhất có vị trí không phải là static */
-    background: #dc2626; /* Màu nền đỏ */
-    border-radius: 50px; /* Bo tròn viền */
-    padding: 1%; /* Đệm xung quanh nội dung */
-    margin-right: 1.5%; /* Lề bên phải */
+body {
+    background-color: black;
+    font-family: Bebas Neue, sans-serif;
 }
 
-.carousel .carousel-icons .left {
-    position: absolute; /* Vị trí tuyệt đối so với phần tử cha */
-    left: 0; /* Đặt biểu tượng sát bên trái */
-    top: 50%; /* Đặt biểu tượng ở giữa theo chiều dọc */
-    background: #dc2626; /* Màu nền đỏ */
-    border-radius: 50px; /* Bo tròn viền */
-    padding: 1%; /* Đệm xung quanh nội dung */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('Assets/Fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('Assets/Fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
 }
 
-.card .image_carousel {
-    width: 100%; /* Chiều rộng tối đa */
-    height: 100%; /* Chiều cao tối đa */
-    border-radius: 10px; /* Bo tròn góc của hình ảnh */
-    scroll-snap-align: /*start*/ center /*end*/; /* Căn giữa hình ảnh khi cuộn */
-    object-fit: cover;
-}
-
-.carousel .card {
-    width: 100%; /* Chiều rộng tối đa */
-    height: 160px; /* Chiều cao cố định */
-    display: flex; /* Hiển thị linh hoạt */
-    gap: 10px; /* Khoảng cách giữa các phần tử con */
-    overflow: scroll; /* Cho phép cuộn nếu nội dung vượt quá kích thước */
-    position: relative; /* Vị trí tương đối so với vị trí ban đầu */
-    scroll-snap-type: x mandatory; /* Yêu cầu cuộn nắm bắt theo chiều ngang */
-    padding-bottom: 10px;
-}
-
-.carousel {
+footer {
     position: relative;
     width: 100%;
-    height: auto;
-    margin-top: 25px;
+    display: flex;
+    background-color: #282828;
+    min-height: 100px;
+    padding: 20px 50px;
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.carousel h3 {
-    color: white;
-    font-weight: bold;
-    margin-bottom: 15px;
-    font-family: Open Sans;
+footer .social_icons, footer .nav-bar_footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    flex-wrap: nowrap;
 }
+
+footer .social_icons li, footer .nav-bar_footer li {
+    list-style: none;
+}
+
+footer .social_icons li a {
+    font-size: 2em;
+    color: white;
+    margin: 0px 10px;
+    display: inline-block;
+    transition: 0.5s ease;
+}
+
+footer .social_icons li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .nav-bar_footer li a {
+    font-size: 1.2em;
+    color: white;
+    margin: 0px 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .nav-bar_footer li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(Assets/Images/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 10;
+    opacity: 1;
+    bottom: 0px;
+    animation: animateWave_1 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 9;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 10;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave_1 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 9;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+
+@keyframes animateWave_1 {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_2 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.carousel-container {
+    padding: 0px 10px ;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel-container h3 {
+      color: rgb(213, 213, 213);
+      font-weight: bold;
+      margin: 30px 0px 10px 1%;
+    }
+  
+  .carousel {
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .carousel img {
+    height: 20vh;
+    object-fit: cover;
+    width: calc(100% / 4.5);
+    margin-left: 10px;
+    border-radius: 15px;
+  }
+  
+  .carousel img:first-child {
+      margin-left: 0px;
+    }
+  
+  .carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+  
+  .carousel.dragging img {
+    pointer-events: none;
+  }
+  
+  .carousel-container i {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: rgba(56, 56, 56, 0.333);
+    color: rgb(225, 225, 225);
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .carousel-container i:hover {
+      background-color: rgba(32, 32, 32, 0.466);
+      color: white;
+    }
+  
+  .carousel-container i:first-child {
+    left: 0px;
+    display: none;
+  }
+  
+  .carousel-container i:last-child {
+    right: -10px;
+  }
 
 ul.dots li.active {
     width: 30px;
@@ -353,20 +500,6 @@ nav.nav-bar {
     z-index: 9999;
 }
 
-@font-face {
-    font-family: 'Bebas Neue';
-    src: url('Assets/Fonts/BebasNeue-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Open Sans';
-    src: url('Assets/Fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
-}
-
-body {
-    background-color: black;
-    font-family: Bebas Neue, sans-serif;
-}
-
 .logo img {
     width: 100%;
 }
@@ -457,14 +590,15 @@ body {
         height: 30vh;
     }
 
-    .carousel .card {
-        height: 110px;
+    .carousel img {
+        height: 10vh;
+        width: calc(100% / 3.5);
     }
 }
 
 /* Moblie */
 @media (max-width: 739px) {
-    .menu-pc, .menu-tablet, .find, .logo, .nav-bar .find, nav.sub-nav {
+    .menu-pc, .menu-tablet, .find, .logo, .nav-bar .find, nav.sub-nav{
         display: none;
     }
 
@@ -548,7 +682,17 @@ body {
         gap: 15px;
     }
 
-    .carousel .card {
-        height: 90px;
+    .carousel img {
+        height: 10vh;
+        width: calc(100% / 2.5);
+    }
+
+    footer {
+        padding: 20px 5px;
+    }
+
+    footer .nav-bar_footer li a {
+        font-size: 1.1em;
+        margin: 7px;
     }
 }
