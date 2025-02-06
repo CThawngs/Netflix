@@ -623,12 +623,12 @@ nav.nav-bar {
         cursor: pointer;
     }
 
-    .menu-mobile .fa-bars:hover ul.menu {
-        display: block;
-    }
-
     .personal {
         width: 30%;
+    }
+
+    ul.menu.open {
+        display: block;
     }
 
     ul.menu {
