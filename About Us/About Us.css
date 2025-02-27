@@ -146,146 +146,38 @@ nav.nav-bar {
     color: black;
 }
 
-/* Slider section */
+/* Container section */
 .container {
-    width: 100%;
+    width: 85%;
     height: auto;
     padding-top: 65px;
-}
-
-.container .slider {
-    display: flex;
-    width: 97vw;
     margin: auto;
 }
 
-.container .slider .panel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    transition: all 700ms ease-in;
-}
-
-.slider .panel h1 {
-    font-size: 35px;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0px;
-    opacity: 0;
-}
-
-.slider .panel.active {
-    flex: 5;
-}
-
-.slider .panel.active h1 {
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-}
-
-/* Content section */
-.container .content {
+.container .item {
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.content .series {
-    display: flex;
-    margin: auto;
-    gap: 10px;
-    width: 98%;
     height: auto;
-    cursor: pointer;
-}
-
-h3 {
-    color: white;
-    font-size: 1.5em;
-    margin-left: 20px;
-    margin-top: 40px;
-}
-
-.series .khung-img {
-    width: 30%;
-    height: 20vh;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.khung-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-.khung-img:hover img {
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
-}
-
-/* Award-Winning Series section */
-.award-winning {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    flex-direction: column;
+    padding: 20px 0px;
 }
 
-.award-winning .khung-series-best {
-    width: 59%;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    object-fit: cover;
+h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.award-winning .khung-series-best img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-.award-winning .khung-series-best:hover img {
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
-}
-
-.award-winning .container-series {
-    width: 39%;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-series .khung-img {
-    width: 100%;
-    height: 40vh;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.container-series .khung-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-}
+p {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: justify;
+    letter-spacing: -1px;
+}   
 
 /* Footer section */
 footer {
@@ -437,32 +329,9 @@ footer .wave#wave4 {
     .personal {
         width: 20%;
     }
-
-    /* Slider section */
-    .container .slider {
-        width: 96vw;
-        transition: opacity 0.3s ease-in 0.4;
-    }
-
-    .container .slider .panel {
-        height: 55vh;
-    }
-
-    /* Content section */
-    .series .khung-img {
-        width: 30%;
-        height: 10vh;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    /* Award-Winning Series section */
-    .container-series .khung-img {
-        height: 16vh;
-    }
 }
 
-/* Moblie */
+/* * Moblie */
 @media (max-width: 739px) {
     .menu-pc, .menu-tablet, .find, .logo, .nav-bar .find, nav.sub-nav {
         display: none;
@@ -536,39 +405,10 @@ footer .wave#wave4 {
         letter-spacing: 3px;
     }
 
-    /* Slider section */
-    .container .slider {
-        width: 96vw;
-        transition: opacity 0.3s ease-in 0.4;
-    }
-
-    .container .slider .panel {
-        height: 30vh;
-    }
-
-    /* Content section */
-    .content .series {
-        display: block;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        width: 95%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    .series .khung-img {
-        margin-top: 20px;
-        width: 100%;
-        height: 20vh;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    /* Award-Winning Series section */
-    .container-series .khung-img {
-        height: 10vh;
-    }
+    /* Container section */
+    p {
+        letter-spacing: normal;
+    }  
 
     /* Footer */
     footer {

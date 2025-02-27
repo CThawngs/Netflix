@@ -665,6 +665,10 @@ nav.nav-bar {
         font-size: 1em;
     }
 
+    .menu a:hover  {
+        color: red;
+    }
+
     .menu a {
         letter-spacing: 3px;
     }
